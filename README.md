@@ -10,10 +10,10 @@ Tecnologias :</br>
 
 <h2>Regras e Padrões</h2>
 
-Nesse topico é definimos regras e padrões de uso do Git para facilitar o trabalho colaborativo e aprimorar documentação
+<p>Nesse topico é definimos regras e padrões de uso do Git para facilitar o trabalho colaborativo e aprimorar documentação</p>
 
-1 - Os commits devem ser intuitivos e resumidos
-2 - Não deve contém ambuiguidade nos commits
-3 - Na pasta de requisitos estará somente a parte da documentação do projeto
-4 - Na pasta src ficara a parte da codificação do projeto
-5 - Caso for fazer alguma manutenção criar uma nova branch
+1 - Os commits devem ser intuitivos e resumidos</br>
+2 - Não deve contém ambuiguidade nos commits</br>
+3 - Na pasta de requisitos estará somente a parte da documentação do projeto</br>
+4 - Na pasta src ficara a parte da codificação do projeto</br>
+5 - Caso for fazer alguma manutenção criar uma nova branch</br>
