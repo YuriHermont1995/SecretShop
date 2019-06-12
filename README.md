@@ -10,7 +10,7 @@ Tecnologias :</br>
 
 <h2>Regras e Padrões</h2>
 
-<p>Nesse topico é definimos regras e padrões de uso do Git para facilitar o trabalho colaborativo e aprimorar documentação</p>
+<p>Nesse topico definimos regras e padrões de uso do Git para facilitar o trabalho colaborativo e aprimorar documentação</p>
 
 1 - Os commits devem ser intuitivos e resumidos</br>
 2 - Não deve contém ambuiguidade nos commits</br>
