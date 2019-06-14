@@ -6,24 +6,12 @@ include_once("../Model/ClassCliente.php");
 		}
 //Função de cadastro de cliente no sistema
 		function cadastrar($Cliente,$link){
-			echo"entrou na bagaça?";
-			echo $Cliente->getNome()."\n";
-			echo $Cliente->getCpf()."\n";
-			echo $Cliente->getAtributo()."\n";
-			echo $Cliente->getVida()."\n";
-			echo $Cliente->getMana()."\n";
-			echo $Cliente->getForca()."\n";
-			echo $Cliente->getAgilidade()."\n";
-			echo $Cliente->getInteligencia()."\n";
-			echo $Cliente->getArmadura()."\n";
-			echo $Cliente->getVelocidadeAtq()."\n";
+			
 			$insert ="INSERT INTO cliente(nome,cpf,atributo,vida, mana, dano, forca, agilidade, inteligencia, armadura, velocidadeDeAtaque)";
 			$values = "VALUES ('".$Cliente->getNome()."','".$Cliente->getCpf()."','".$Cliente->getAtributo()."',".$Cliente->getVida().",".$Cliente->getMana().",".$Cliente->getDano()."
 ,".$Cliente->getForca().",".$Cliente->getAgilidade().",".$Cliente->getInteligencia().",".$Cliente->getArmadura().",".$Cliente->getVelocidadeAtq().");";
 		
 			$query = $insert.$values;
-			echo"mas saiu da bagaça?";
-			echo $query;
 		
 			if(!mysqli_query($link,$query)){
 				die ("nao foi possivel salvar".mysqli_error($link));
