@@ -6,7 +6,7 @@
 	
 	$cliente = new Cliente($cpf,"","","");
 
-	$con = new Conection("localhost","root","","BD1");
+	$con = new Conection("localhost","root","aluno","secretshop");
 	$con->conectar();
 	
 	$clienteDAO = new ClienteDAO();

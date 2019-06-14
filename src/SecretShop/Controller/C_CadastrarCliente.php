@@ -12,26 +12,23 @@
 	$mana= 1000;
 	//$dano= $_POST['dano'];
 	$dano= 60;
-
 	//$forca= $_POST['forca'];
 	$forca= 30;
 	//$agilidade= $_POST['agilidade'];
 	$agilidade= 30;
 	//$inteligencia= $_POST['inteligencia'];
 	$inteligencia= 30;
-
 	//$armadura= $_POST['armadaura'];
 	$armadura= 10;
 	//$velocidadeAtq= $_POST['velocidadeAtq'];
 	$velocidadeAtq= 10;
-	
+
 	$cliente = new Cliente($cpf,$nome,$atributo,$vida,$mana,$dano,$forca,$agilidade,$inteligencia,$armadura,$velocidadeAtq);
 	//$cliente->verMochila();
-	
+
 	$con = new Conection("localhost","root","aluno","secretshop");
 	$con->conectar();
-	echo "!11111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
-	
+
 	$clienteDAO = new ClienteDAO();
 	$clienteDAO->cadastrar($cliente,$con->getLink());
 	

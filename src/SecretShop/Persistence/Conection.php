@@ -10,8 +10,7 @@
 		}
 		
 		function conectar(){
-			$this->link = mysqli_connect($this->server, $this->user, 
-										$this->pwd, $this->bd);
+			$this->link = mysqli_connect($this->server, $this->user,$this->pwd, $this->bd);
 			if (!$this->link){
 				die ("nao foi possivel conectar".mysqli_error());
 			} 
