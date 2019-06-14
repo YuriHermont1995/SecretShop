@@ -1,12 +1,6 @@
 <?php
 	class Conection{
 		var $server, $user, $pwd, $bd, $link;
-		/*function __construct(){
-			$this->server = "";
-			$this->user = "";
-			$this->pwd = "";
-			$this->bd = "";
-		}*/
 
 		function __construct($serverv, $userv, $pwdv, $bdv){
 			$this->server = $serverv;
@@ -21,7 +15,7 @@
 			if (!$this->link){
 				die ("nao foi possivel conectar".mysqli_error());
 			} 
-			echo "sucesso";
+			echo "sucesso!";
 		}
 
 		function getLink(){

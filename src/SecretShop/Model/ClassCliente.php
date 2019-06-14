@@ -28,8 +28,8 @@
 			$this->armadura=10;
 			//$this->velocidadeAtq=$velocidadeAtqv;
 			$this->velocidadeAtq=10;
-			$this->mochila = __instanciaMochila();
-			}
+			//$this->mochila = __instanciaMochila();
+		}
 		private function __instanciaMochila(){
 			//INSTANCIA UMA NOVA MOCHILA
 			return 10;
