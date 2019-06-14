@@ -7,6 +7,8 @@ Tecnologias :</br>
 -PHP</br>
 -JavaScript</br>
 -MySQL</br>
+Padrao: </br>
+-MVC</br>
 
 <h2>Regras e Padrões</h2>
 
@@ -17,3 +19,5 @@ Tecnologias :</br>
 3 - Na pasta de requisitos estará somente a parte da documentação do projeto</br>
 4 - Na pasta src ficara a parte da codificação do projeto</br>
 5 - Caso for fazer alguma manutenção criar uma nova branch</br>
+
+  
