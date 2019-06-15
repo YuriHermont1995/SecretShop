@@ -7,9 +7,9 @@ include_once("../Model/ClassItem.php");
 //Função de cadastro de cliente no sistema
 		function cadastrar($Item,$link){
 			
-			$insert ="INSERT INTO item(nome,cpf,atributo,vida, mana, dano, forca, agilidade, inteligencia, armadura, velocidadeDeAtaque)";
-			$values = "VALUES ('".$Cliente->getNome()."','".$Cliente->getCpf()."','".$Cliente->getAtributo()."',".$Cliente->getVida().",".$Cliente->getMana().",".$Cliente->getDano()."
-,".$Cliente->getForca().",".$Cliente->getAgilidade().",".$Cliente->getInteligencia().",".$Cliente->getArmadura().",".$Cliente->getVelocidadeAtq().");";
+			$insert ="INSERT INTO item(nome,descricao,preco,forca,agilidade,inteligencia,vida,mana,dano,armadura,velocidadeDeAtaque,habilidadeAtiva,descricaoAtiva,habilidadePassiva,descricaoPassiva)";
+			$values = "VALUES ('".$Item->getNome()."','".$Item->getDescricao()."',".$Item->getPreco().",".$Item->getVida().",".$Item->getMana().",".$Item->getDano()."
+,".$Item->getForca().",".$Item->getAgilidade().",".$Item->getInteligencia().",".$Item->getArmadura().",".$Item->getVelocidadeAtq().");";
 		
 			$query = $insert.$values;
 		
@@ -20,8 +20,8 @@ include_once("../Model/ClassItem.php");
 		}
 
 //Função de Exclusao de cliente no sistema
-		function excluir($Cliente,$link){
-			$query = "DELETE FROM `cliente` WHERE CPF = '".$Cliente->getCpf()."';";
+		function excluir($Item,$link){
+			$query = "DELETE FROM `cliente` WHERE CPF = '".$Item->getCpf()."';";
 			if(!mysqli_query($link,$query)){
 				die ("nao foi possivel excluir".mysqli_error($link));
 			}
@@ -30,8 +30,8 @@ include_once("../Model/ClassItem.php");
 
 
 //Função de select de um cliente no sistema
-		function consultar($Cliente,$link){
-			$query = "SELECT * FROM `cliente` WHERE CPF = '".$Cliente->getCpf()."';";
+		function consultar($Item,$link){
+			$query = "SELECT * FROM `cliente` WHERE CPF = '".$Item->getCpf()."';";
 			$r = mysqli_query($link, $query);
 		
 			if (!$r) {
