@@ -1,13 +1,13 @@
 <?php
-include_once("../Model/ClassCliente.php");
-	class ClienteDAO{
+include_once("../Model/ClassItem.php");
+	class ItemDAO{
 	
 		function __construct(){
 		}
 //Função de cadastro de cliente no sistema
-		function cadastrar($Cliente,$link){
+		function cadastrar($Item,$link){
 			
-			$insert ="INSERT INTO cliente(nome,cpf,atributo,vida, mana, dano, forca, agilidade, inteligencia, armadura, velocidadeDeAtaque)";
+			$insert ="INSERT INTO item(nome,cpf,atributo,vida, mana, dano, forca, agilidade, inteligencia, armadura, velocidadeDeAtaque)";
 			$values = "VALUES ('".$Cliente->getNome()."','".$Cliente->getCpf()."','".$Cliente->getAtributo()."',".$Cliente->getVida().",".$Cliente->getMana().",".$Cliente->getDano()."
 ,".$Cliente->getForca().",".$Cliente->getAgilidade().",".$Cliente->getInteligencia().",".$Cliente->getArmadura().",".$Cliente->getVelocidadeAtq().");";
 		
