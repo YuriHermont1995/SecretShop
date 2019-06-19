@@ -21,7 +21,7 @@ include_once("../Model/ClassItem.php");
 
 //Função de Exclusao de cliente no sistema
 		function excluir($Item,$link){
-			$query = "DELETE FROM `cliente` WHERE CPF = '".$Item->getCpf()."';";
+			$query = "DELETE FROM `Item` WHERE nome = '".$Item->getNome()."';";
 			if(!mysqli_query($link,$query)){
 				die ("nao foi possivel excluir".mysqli_error($link));
 			}
@@ -31,7 +31,7 @@ include_once("../Model/ClassItem.php");
 
 //Função de select de um cliente no sistema
 		function consultar($Item,$link){
-			$query = "SELECT * FROM `cliente` WHERE CPF = '".$Item->getCpf()."';";
+			$query = "SELECT * FROM `Item` WHERE nome = '".$Item->getNome()."';";
 			$r = mysqli_query($link, $query);
 		
 			if (!$r) {
@@ -43,9 +43,9 @@ include_once("../Model/ClassItem.php");
 		}
 
 //Função de Atualizaçao de cliente no sistema
-		function alterar($Cliente,$link){
-			echo $Cliente->getNome();
-			$query = "UPDATE cliente SET Nome='".$Cliente->getNome()."',atributo='".$Cliente->getAtributo()."',vida=".$Cliente->getVida(). ",mana=".$Cliente->getMana(). ",dano=".$Cliente->getDano(). ",forca=".$Cliente->getForca(). ",agilidade=".$Cliente->getAgilidade(). ",inteligencia=".$Cliente->getInteligencia(). ",armadura=".$Cliente->getArmadura(). ",velocidadeDeAtaque=".$Cliente->getVelocidadeAtq(). " WHERE CPF = '".$Cliente->getCpf()."';";
+		function alterar($Item,$link){
+			echo $Item->getNome();
+			$query = "UPDATE item SET Nome='".$Item->getNome()."',atributo='".$Cliente->getAtributo()."',vida=".$Cliente->getVida(). ",mana=".$Cliente->getMana(). ",dano=".$Cliente->getDano(). ",forca=".$Cliente->getForca(). ",agilidade=".$Cliente->getAgilidade(). ",inteligencia=".$Cliente->getInteligencia(). ",armadura=".$Cliente->getArmadura(). ",velocidadeDeAtaque=".$Cliente->getVelocidadeAtq(). " WHERE CPF = '".$Cliente->getCpf()."';";
 			echo $query;
 			if(!mysqli_query($link,$query)){
 				die ("nao foi possivel alterar".mysqli_error($link));
