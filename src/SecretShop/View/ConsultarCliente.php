@@ -10,9 +10,35 @@
 	<h2> Consultar Cliente </h2>
 	<form action="../Controller/C_ConsultarCliente.php" method="post">
 		CPF:<input type="text" name="cpf"><br>
-		
 		<input type="submit" value="enviar">
 		<input type="reset" value="apagar">
+		<?php 
+		$campos = 0;
+		$aux[0] = 1;
+		for($campos;$campos <11;$campos+=$campos){
+			$aux[$campos] = sessionStorage.getItem("$campos");;
+		}
+		echo $aux;
+			if(!empty($aux)){
+				echo $aux[0];
+				echo '<input type="text" name="cpf1"><br>';
+				echo 'Nome:<input type="text" name="nome" value ='.$id[1].'><br>';
+				/*Atributo:<input type="text" name="atributo" value ="<?php $row[3] ?>"><br>
+		
+				Vida:<input type="text" name="cpf" disabled><br>
+				Mana:<input type="text" name="cpf" disabled><br>
+				Dano:<input type="text" name="cpf" disabled><br>
+		
+				Força:<input type="text" name="cpf" disabled><br>
+				Agilidade:<input type="text" name="cpf" disabled><br>
+				Inteligencia:<input type="text" name="cpf" disabled><br>
+				Armadura:<input type="text" name="cpf" disabled><br>
+				VelocidadeDeAtq:<input type="text" name="cpf" disabled><br>
+			*/
+			}
+		?>
+		
+		
 	</form>
 
 </body>
