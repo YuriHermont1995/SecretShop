@@ -30,6 +30,11 @@
 			$this->velocidadeAtq=10;
 			//$this->mochila = __instanciaMochila();
 		}
+		//function __construct($cpfv){
+		//	$this->cpf = $cpfv;
+		//}
+		
+		
 		private function __instanciaMochila(){
 			//INSTANCIA UMA NOVA MOCHILA
 			return 10;
