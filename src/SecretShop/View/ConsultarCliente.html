@@ -4,16 +4,19 @@
 <header>
 	<meta charset="utf-8">
 	<title> Titulo </title>
+
+	<script type="text/javascript" src="../../apis/js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../js/ConsultarCliente.js"></script>
 </header>
 
 <body>
 	<h2> Consultar Cliente </h2>
-	<form action="../Controller/C_ConsultarCliente.php" method="post">
-		CPF:<input type="text" name="cpf"><br>
+	<div>
+		CPF: <input type="text" name="cpf"><br>
 		
-		<input type="submit" value="enviar">
+		<button id="enviar">enviar</button>
 		<input type="reset" value="apagar">
-	</form>
+	</div>
 
 </body>
 
