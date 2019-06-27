@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+	include_once("../Controller/C_ConsultarCliente.php");
+?>
+
 <html lang="pt-br">
 
 <header>
@@ -9,12 +13,18 @@
 <body>
 	<h2> Consultar Cliente </h2>
 	<form action="../Controller/C_ConsultarCliente.php" method="post">
-		CPF:<input type="text" name="cpf"><br>
+		//CPF:<input type="text" name="cpf" value ="<?php echo$_POST['cpf'] ?>"><br>
+		<?php 
+			//Selecionar $cli = new Selecionar();
+			//$dados = $cli->select($_POST['cpf']);
+			//echo $dados;
+		?>
 		<input type="submit" value="enviar">
 		<input type="reset" value="apagar">
-		<?php 
-		$campos = 0;
-		$aux[0] = 1;
+		
+		Atributo:<input type="text" name="atributo" value ="<?php $dados[3] ?>"><br>
+		<!--
+		/*<?php 
 		for($campos;$campos <11;$campos+=$campos){
 			$aux[$campos] = sessionStorage.getItem("$campos");;
 		}
@@ -36,7 +46,7 @@
 				VelocidadeDeAtq:<input type="text" name="cpf" disabled><br>
 			*/
 			}
-		?>
+		?>-->
 		
 		
 	</form>
