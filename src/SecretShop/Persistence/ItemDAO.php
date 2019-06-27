@@ -31,14 +31,14 @@ include_once("../Model/ClassItem.php");
 
 //Função de select de um cliente no sistema
 		function consultar($Item,$link){
-			$query = "SELECT * FROM `Item` WHERE nome = '".$Item->getNome()."';";
-			$r = mysqli_query($link, $query);
-		
+			$query = "SELECT * FROM `item` WHERE nome = '".$Item->getNome()."';";
+			$r = mysqli_query($link,$query);
 			if (!$r) {
 				echo "Erro do banco de dados, não foi possível consultar o banco de dados\n";
 				echo 'Erro MySQL: ' . mysqli_error();
 				exit;
 			}
+			
 			return mysqli_fetch_assoc($r);
 		}
 

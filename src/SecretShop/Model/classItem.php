@@ -2,11 +2,11 @@
 	class Item{
 		var $nome, $descricao, $composicao, $preco, $forca,$agilidade, $inteligencia, $vida, $mana, $dano, $armadura, $velocidadeAtq, $img;
 		
-		function __construct($nome){
+		function __construct($nomev){
 			// instanciar realmente somente valores nao nulos do banco
 			
 			$this->nome = $nomev;
-			$this->descricao = $descricaov;
+			/*$this->descricao = $descricaov;
 			$this->preco = $precov;
 			$this->forca = $forcav;
 			$this->agilidade = $agilidadev;
@@ -24,13 +24,9 @@
 			$this->descPassiva = $descPassiva;
 			
 			
-			$this->composicao = __setComposicao();
+			*/
 		}
-		private function __setComposicao(){
-			
-			$this->composicao[];  //solicitaçao do BD para itens de composição
-			//setar a lista de itens que compoem este
-		}
+		
 		
 		
 		public function getNome(){
@@ -141,7 +137,6 @@
 		//realizar a exibiçao do itemdeve ser apartir da verificação de campos nao NULL
 		function exibirItem(){
 			$return= $this->nome."\n força = ".$this->forca."\n agilidade = ".$this->agilidade."\n inteligencia = ".$this->inteligencia."\n inteligencia = ".$this->inteligencia."\n inteligencia = ".$this->inteligencia."\n";
-			return $
 		}
 	}
 
