@@ -1,3 +1,3 @@
-$("button").click(function(){
+$("#enviar").click(function(){
     alert("clicado");
 });
